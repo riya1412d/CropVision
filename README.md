@@ -14,6 +14,22 @@ CropVision analyzes plant leaf images and predicts one of five plant health clas
 
 ---
 
+## Model Evidence
+
+### Explainability — Grad-CAM
+
+![Grad-CAM Result](models/gradcam_result.png)
+
+### Evaluation — Confusion Matrix
+
+![Confusion Matrix](models/confusion_matrix.png)
+
+### Training — Accuracy Curve
+
+![Training Accuracy](models/training_history.png)
+
+---
+
 ## Overview
 
 CropVision is a computer vision project built using **MobileNetV2** transfer learning.
