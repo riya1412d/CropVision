@@ -6,9 +6,17 @@ CropVision analyzes plant leaf images and predicts one of five plant health clas
 
 ---
 
+## Demo
+
+### CropVision Web App
+
+![CropVision Web App](screenshots/app-demo.png)
+
+---
+
 ## Overview
 
-CropVision is a computer vision project built using transfer learning with **MobileNetV2**.
+CropVision is a computer vision project built using **MobileNetV2** transfer learning.
 
 The system takes a leaf image as input and provides:
 
