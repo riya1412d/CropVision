@@ -1,27 +1,43 @@
 # CropVision 🌱
 
-AI-powered plant disease classification using transfer learning and explainable AI.
+> AI-powered plant disease classification using MobileNetV2 transfer learning and Grad-CAM explainability.
+
+CropVision analyzes plant leaf images and predicts one of five plant health classes through a Streamlit web application.
+
+---
 
 ## Overview
 
-CropVision is an image-based plant health classification system that analyzes leaf images and predicts one of five plant health classes.
+CropVision is a computer vision project built using transfer learning with **MobileNetV2**.
 
-The project uses a pretrained MobileNetV2 model with transfer learning and provides predictions through a Streamlit web interface.
+The system takes a leaf image as input and provides:
 
-## Features
-
-- Plant leaf image classification
-- MobileNetV2 transfer learning
+- Plant health classification
+- Model confidence
 - Top-3 prediction distribution
-- Confidence score
-- Grad-CAM explainability
-- Streamlit interface
-- Model evaluation with confusion matrix
-- Training performance visualization
+- Grad-CAM visual explanation
+- Supporting agricultural considerations
 
-## Classes
+The project is designed as an **AI/ML research and demonstration system**.
 
-CropVision recognizes:
+---
+
+## Key Results
+
+| Metric | Result |
+|---|---:|
+| Validation Accuracy | **94.52%** |
+| Validation Samples | **821** |
+| Classes | **5** |
+| Backbone | **MobileNetV2** |
+
+The reported validation accuracy comes from evaluation on 821 held-out validation images.
+
+---
+
+## Supported Classes
+
+CropVision currently recognizes:
 
 1. Bell Pepper — Bacterial Spot
 2. Bell Pepper — Healthy
@@ -29,57 +45,21 @@ CropVision recognizes:
 4. Potato — Late Blight
 5. Potato — Healthy
 
-## Model
+---
 
-### Architecture
-
-Input Image
-→ Data Augmentation
-→ MobileNetV2
-→ Global Average Pooling
-→ Dropout
-→ Dense Softmax Classifier
-
-## Model Performance
-
-Validation accuracy:
-
-**94.52%**
-
-Validation samples:
-
-**821**
-
-The evaluation includes class-wise precision, recall and F1-score.
-
-## Explainability
-
-CropVision uses Grad-CAM to visualize image regions that contributed to the selected prediction.
-
-The visualization is intended to improve model interpretability and should not be treated as independent proof of a disease diagnosis.
-
-## Tech Stack
-
-- Python
-- TensorFlow
-- Keras
-- MobileNetV2
-- Streamlit
-- NumPy
-- Pillow
-- Matplotlib
-- Scikit-learn
-
-## Project Structure
+## Model Architecture
 
 ```text
-Cropvision/
-├── models/
-├── test_images/
-├── app.py
-├── generate_gradcam.py
-├── prepare_dataset.py
-├── train_model.py
-├── verify_model.py
-├── requirements.txt
-└── README.md
+Leaf Image
+    ↓
+Data Augmentation
+    ↓
+MobileNetV2
+    ↓
+Global Average Pooling
+    ↓
+Dropout
+    ↓
+Dense Softmax Classifier
+    ↓
+Class Prediction
